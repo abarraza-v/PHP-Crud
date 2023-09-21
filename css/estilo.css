@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: F6F6FE;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.material-symbols-outlined {
+  font-size: 2em;
+
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 21;
+}
+
+.flex-content {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+main,
+footer {
+  padding: 20px;
+  min-width: 250px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #39557c;
+  flex-basis: 60px;
+  padding: 20px;
+  min-width: 250px;
+}
+
+.nav__title {
+  font-weight: 410;
+  font-size: 26px;
+  margin: 0;
+}
+
+.nav__link--mod {
+  border-left: solid 3.1px #fff;
+  padding: 5px;
+  padding-left: 10px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav__link--resize {
+  margin-left: 10px;
+  min-width: 160px;
+}
+
+nav a {
+  color: #fff;
+  display: flex;
+  margin-right: 10px;
+}
+
+.nav__p {
+  display: none;
+}
+
+main {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  background: #7599b3;
+  flex-shrink: 0;
+  flex-grow: 3;
+}
+
+footer {
+  background: #375278;
+  flex-basis: 60px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.footer__p {
+  font-size: 0.8em;
+}
+
+.main__container-form {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  flex-basis: 500px;
+  max-width: 800px;
+}
+
+.main__container-form__form {
+  display: flex;
+  flex-direction: column;
+  color: #070722;
+  flex: 1;
+  padding: 25px;
+  flex-wrap: wrap;
+}
+
+.main__container-form__form--header {
+  flex-basis: 80px;
+  text-align: center;
+  background-color: #3a557c;
+  padding: 25px;
+}
+
+.main__container-form__form--header h2 {
+  font-weight: 410;
+}
+
+.main__container-form__form--inputs {
+  color: #fff;
+}
+
+.main__container-form__label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #070722;
+  margin-bottom: 12px;
+}
+
+.main__container-form__input {
+  width: 100%;
+  padding: 13px 22px;
+  border-radius: 5px;
+  border: 1px solid #dde3ec;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  color: #494949;
+  outline: none;
+  resize: none;
+  margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav__p {
+    display: block;
+  }
+
+  nav .nav__a1 h1 {
+    font-size: 28px;
+  }
+}
