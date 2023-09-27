@@ -149,6 +149,24 @@ footer {
   margin-bottom: 24px;
 }
 
+.radio-group-container {
+  margin: 20px 0px;
+  color: #000;
+  display: block;
+}
+
+.submit-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.submit-container input {
+  width: 60%;
+  font-size: 1.2em;
+}
+
 @media only screen and (min-width: 768px) {
   .nav__p {
     display: block;

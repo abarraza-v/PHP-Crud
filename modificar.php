@@ -42,7 +42,7 @@
               <label for="F"> Femenino </label><br><br>
               <input type="submit">
             </form>
-            <a href="index.php"><br>Cancelar</a>
+            <a href="lista.php"><br>Cancelar</a>
             
             <script>
               let curso =  "'.$row["curso"].'"

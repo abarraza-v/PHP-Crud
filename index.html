@@ -69,40 +69,29 @@
               </select>
             </div>
 
-            <div class="main__container-form">
-              <label for="jobtitle" class="formbold-form-label"> What are you looking for? </label>
+            <div class="radio-group-container">
+              <label for="jobtitle" class="formbold-form-label"> Cuál es tu sexo? </label>
 
-              <div class="main__container-form__radio-group-container">
+              <div class="radio-group-container__option">
                 <div class="formbold-radio-group">
                   <label class="formbold-radio-label">
-                    <input class="formbold-input-radio" type="radio" name="sexo" id="M">
+                    <input class="formbold-input-radio" type="radio" name="sexo" id="M" value="Masculino">
                     Masculino
                     <span class="formbold-radio-checkmark"></span>
                   </label>
                 </div>
 
-                <div class="formbold-radio-group">
+                <div class="radio-group-container__option">
                   <label class="formbold-radio-label">
-                    <input class="formbold-input-radio" type="radio" name="jobtitle" id="jobtitle">
-                    Graphics Design
+                    <input class="formbold-input-radio" type="radio" name="sexo" id="F" value="Femenino">
+                    Femenino
                     <span class="formbold-radio-checkmark"></span>
                   </label>
                 </div>
-                <div>
-
-                  <div>
-                    <input class="main__container-form__input" type="radio" id="M" name="sexo" value="Masculino"
-                      required>
-                    <label class="main__container-form__label" for="M"> Masculino </label>
-                  </div>
-                  <div>
-                    <input class="main__container-form__input" type="radio" id="F" name="sexo" value="Femenino"
-                      required>
-                    <label class="main__container-form__label" for="F"> Femenino </label>
-                  </div>
-                </div>
               </div>
-              <input type="submit">
+              <div class="submit-container">
+                <input type="submit">
+              </div>
         </form>
       </div>
     </main>

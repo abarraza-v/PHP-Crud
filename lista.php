@@ -82,7 +82,7 @@ function mostrar($conn){
     <body>
         <h1>Alumnos</h1>
         <p>No hay datos registrados.</p>
-        <a href="insertar.html">Insertar nuevo dato</a><br><br>
+        <a href="index.html">Insertar nuevo dato</a><br><br>
     </body>
     </html>
     ';
