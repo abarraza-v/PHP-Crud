@@ -7,8 +7,5 @@ function enviarRut (rut) {
 
 }
 
-function decirHola () {
 
-    alert("hola");
-}
 
