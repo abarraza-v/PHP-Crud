@@ -9,6 +9,9 @@
   $edad = $_POST['edad'];
   $curso = $_POST['curso'];
   $sexo = $_POST['sexo'];
+  $indicador = $_POST['indicador'];
+
+
 
   function insertarEnAlumno($rut, $nombre, $contrasena, $curso, $sexo, $edad, $conn) {
 
@@ -23,5 +26,22 @@
     header("location: lista.php");
   }
 
-  insertarEnAlumno($rut, $nombre, $contrasena, $curso, $sexo, $edad, $conn);
+  function actualizarDatos ($rut,$nombre,$contraseña,$curso,$sexo,$edad,$conn) {
+
+    mysqli_select_db($conn, 'avb');
+    $sql = "UPDATE alumnos SET nombre = '$nombre', contraseña = '$contraseña', curso = '$curso', sexo = '$sexo', edad = '$edad' WHERE rut = '$rut'";
+    mysqli_query($conn, $sql);
+    header("location: lista.php");
+  }
+
+  if (isset($_POST['indicador'])) { 
+    if ($_POST['indicador'] == "insertar") {
+      insertarEnAlumno($rut, $nombre, $contrasena, $curso, $sexo, $edad, $conn);
+    } else if ($_POST['indicador'] == "actualizar") {
+      actualizarDatos($rut,$nombre,$contraseña,$curso,$sexo,$edad,$conn);
+    }
+  } else {
+      echo 'Porfavor, ve a ingresar datos a <a href="index.php"></a>.';
+  }
+  
 ?>
