@@ -1,3 +1,15 @@
+<?php
+
+require 'conexion.php';
+
+if (isset($_POST['rut'])) {
+  
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,6 +102,7 @@
                 </div>
               </div>
               <div class="submit-container">
+                <input type="hidden" name="indicador" value="insertar">
                 <input type="submit">
               </div>
         </form>
