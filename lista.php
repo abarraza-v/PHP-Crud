@@ -31,7 +31,7 @@ function mostrar($conn){
         </head>
         <body>
             <h1>Alumnos</h1>
-            <a href="index.html">Insertar nuevo dato</a><br><br>
+            <a href="index.php">Insertar nuevo dato</a><br><br>
             <script src="script.js"></script>
             <table style="text-align: center" border="1">
             <thead>
@@ -82,7 +82,7 @@ function mostrar($conn){
     <body>
         <h1>Alumnos</h1>
         <p>No hay datos registrados.</p>
-        <a href="index.html">Insertar nuevo dato</a><br><br>
+        <a href="index.php">Insertar nuevo dato</a><br><br>
     </body>
     </html>
     ';
