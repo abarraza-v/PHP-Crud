@@ -1,0 +1,43 @@
+/* Estilos globales 
+------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f6f6f6;
+}
+
+a {
+  color: #f6f6f6;
+  text-decoration: none;
+}
+
+.material-symbols-outlined {
+  font-size: 35px;
+  margin-right: 5px;
+  font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
+}
+
+/* Estilos del Header 
+  ------------------------------------------ */
+
+/* Estilos del Nav Principal
+  ------------------------------------------ */
+
+/* Estilos del main 
+  ------------------------------------------ */
+
+/* Estilos del footer 
+  ------------------------------------------ */
+
+/* Media Querys 
+  ------------------------------------------ */
+
+@media only screen and (min-width: 768px) {
+}
