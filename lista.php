@@ -59,7 +59,7 @@ function mostrar($conn){
                     <td>' . $row["sexo"] . '</td>
                     <td>'. $row["edad"]. '</td>
                     <td>
-                        <form action="modificar.php" method="post">
+                        <form action="index.php" method="post">
                             <input type="hidden" name="rut" value="'. $row["rut"]. '">
                             <input type="submit" value="Modificar">
                         </form>

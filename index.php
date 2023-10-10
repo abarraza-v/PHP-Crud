@@ -52,31 +52,31 @@ function generarActualizador($conn, $rut){
                 <div class="main__container-form__form--inputs">
                   <div>
                     <label class="main__container-form__label" for="rut">Rut: </label>
-                    <input class="main__container-form__input" type="text" name="rut" value="'.$row["rut"].'" placeholder="Rut (Ej: 15899234-4)" readonly
+                    <input class="main__container-form__input" type="text" name="rut" value="'.$row['rut'].'" placeholder="No modifiques este dato." readonly
                       required>
                   </div>
       
                   <div>
                     <label class="main__container-form__label" for="nombre">Nombre: </label>
-                    <input class="main__container-form__input" type="text" name="nombre" value="'.$row["nombre"].'"
-                      placeholder="Ingrese el nombre del alumno" required>
+                    <input class="main__container-form__input" type="text" name="nombre" value="'.$row['nombre'].'"
+                      placeholder="Actualize el nombre del alumno" required>
                   </div>
       
                   <div>
                     <label class="main__container-form__label" for="contraseña">Contraseña: </label>
-                    <input class="main__container-form__input" type="password" name="contraseña" value="'.$row["contraseña"].'"
-                      placeholder="Ingrese la contraseña del alumno" required>
+                    <input class="main__container-form__input" type="password" name="contraseña" value="'.$row['contraseña'].'"
+                      placeholder="Actualize la contraseña del alumno" required>
                   </div>
       
                   <div>
                     <label class="main__container-form__label" for="edad">Edad:</label>
-                    <input class="main__container-form__input" type="number" name="edad" value="'.$row["edad"].'"
-                      placeholder="Ingrese la edad del alumno" id="edad">
+                    <input class="main__container-form__input" type="number" name="edad" value="'.$row['edad'].'"
+                      placeholder="Actualize la edad del alumno" id="edad">
                   </div>
       
                   <div>
                     <label class="main__container-form__label" for="curso">Curso:</label>
-                    <select name="curso" required>
+                    <select name="curso" id="inputCursos" required>
                       <option value="Primero">1ero Medio</option>
                       <option value="Segundo">2do Medio</option>
                       <option value="Tercero">3ero Medio</option>
@@ -90,7 +90,7 @@ function generarActualizador($conn, $rut){
                     <div class="radio-group-container__option">
                       <div class="formbold-radio-group">
                         <label class="formbold-radio-label">
-                          <input class="formbold-input-radio" type="radio" name="sexo" id="M" value="Masculino">
+                          <input class="formbold-input-radio" type="radio" name="sexo" id="inputMasculino" value="Masculino">
                           Masculino
                           <span class="formbold-radio-checkmark"></span>
                         </label>
@@ -98,7 +98,7 @@ function generarActualizador($conn, $rut){
       
                       <div class="radio-group-container__option">
                         <label class="formbold-radio-label">
-                          <input class="formbold-input-radio" type="radio" name="sexo" id="F" value="Femenino">
+                          <input class="formbold-input-radio" type="radio" name="sexo" id="inputFemenino" value="Femenino">
                           Femenino
                           <span class="formbold-radio-checkmark"></span>
                         </label>
@@ -116,24 +116,26 @@ function generarActualizador($conn, $rut){
           </footer>
         </div>
         <script>
-                  let curso =  "'.$row["curso"].'";
-                  let inputCursos = document.getElementById("inputCursos");
-                  for (let i = 0; i < inputCursos.options.length; i++) {
-                    if (inputCursos.options[i].value == curso) {
-                      inputCursos.options[i].selected = true;
-                      break;
-                    }
-                  }
+          console.log("'.$row['curso'].' '.$row['sexo'].'")
+
+          let curso =  "'.$row['curso'].'";
+          let inputCursos = document.getElementById("inputCursos");
+          for (let i = 0; i < inputCursos.options.length; i++) {
+            if (inputCursos.options[i].value == curso) {
+            inputCursos.options[i].selected = true;
+            break;
+            }
+          }
       
-                  let sexo = "' . $row["sexo"] . '";
-                    let inputMasculino = document.getElementById("inputMasculino");
-                    let inputFemenino = document.getElementById("inputFemenino");
-                    if (sexo == "Masculino") {
-                        inputMasculino.checked = true;
-                    } else if (sexo == "Femenino") {
-                        inputFemenino.checked = true;
-                    }
-                </script>
+          let sexo = "' . $row['sexo'] . '";
+          let inputMasculino = document.getElementById("inputMasculino");
+          let inputFemenino = document.getElementById("inputFemenino");
+          if (sexo == "Masculino") {
+            inputMasculino.checked = true;
+          } else if (sexo == "Femenino") {
+            inputFemenino.checked = true;
+          }
+        </script>
       </body>
       </html>';
     }
@@ -204,7 +206,7 @@ function generarInsertador() {
   
               <div>
                 <label class="main__container-form__label" for="curso">Curso:</label>
-                <select name="curso" required>
+                <select name="curso" id="inputCursos" required>
                   <option value="Primero">1ero Medio</option>
                   <option value="Segundo">2do Medio</option>
                   <option value="Tercero">3ero Medio</option>
@@ -218,7 +220,7 @@ function generarInsertador() {
                 <div class="radio-group-container__option">
                   <div class="formbold-radio-group">
                     <label class="formbold-radio-label">
-                      <input class="formbold-input-radio" type="radio" name="sexo" id="M" value="Masculino">
+                      <input class="formbold-input-radio" type="radio" name="sexo" id="inputMasculino" value="Masculino">
                       Masculino
                       <span class="formbold-radio-checkmark"></span>
                     </label>
@@ -226,7 +228,7 @@ function generarInsertador() {
   
                   <div class="radio-group-container__option">
                     <label class="formbold-radio-label">
-                      <input class="formbold-input-radio" type="radio" name="sexo" id="F" value="Femenino">
+                      <input class="formbold-input-radio" type="radio" name="sexo" id="inputFemenino" value="Femenino">
                       Femenino
                       <span class="formbold-radio-checkmark"></span>
                     </label>

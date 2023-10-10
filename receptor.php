@@ -26,19 +26,21 @@
     header("location: lista.php");
   }
 
-  function actualizarDatos ($rut,$nombre,$contraseña,$curso,$sexo,$edad,$conn) {
+  function actualizarDatos ($rut, $nombre, $contrasena, $curso, $sexo, $edad, $conn) {
 
     mysqli_select_db($conn, 'avb');
-    $sql = "UPDATE alumnos SET nombre = '$nombre', contraseña = '$contraseña', curso = '$curso', sexo = '$sexo', edad = '$edad' WHERE rut = '$rut'";
+    $sql = "UPDATE alumnos SET nombre = '$nombre', contraseña = '$contrasena', curso = '$curso', sexo = '$sexo', edad = '$edad' WHERE rut = '$rut'";
     mysqli_query($conn, $sql);
     header("location: lista.php");
   }
 
+
+  // Verificando cuál función se ejecutará.
   if (isset($_POST['indicador'])) { 
     if ($_POST['indicador'] == "insertar") {
       insertarEnAlumno($rut, $nombre, $contrasena, $curso, $sexo, $edad, $conn);
     } else if ($_POST['indicador'] == "actualizar") {
-      actualizarDatos($rut,$nombre,$contraseña,$curso,$sexo,$edad,$conn);
+      actualizarDatos($rut,$nombre,$contrasena,$curso,$sexo,$edad,$conn);
     }
   } else {
       echo 'Porfavor, ve a ingresar datos a <a href="index.php"></a>.';
