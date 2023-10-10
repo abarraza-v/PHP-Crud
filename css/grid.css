@@ -24,6 +24,12 @@ a {
   font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
 }
 
+.l-grid-content {
+  display: grid;
+  grid-template-rows: repeat(12, 100px);
+  grid-template-columns: repeat(12, 100px);
+}
+
 /* Estilos del Header 
   ------------------------------------------ */
 
