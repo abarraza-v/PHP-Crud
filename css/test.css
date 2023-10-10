@@ -1,3 +1,6 @@
+/* Estilos globales 
+------------------------------------------ */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +17,9 @@ a {
   color: #f6f6f6;
   text-decoration: none;
 }
+
+/* Estilos del Header 
+------------------------------------------ */
 
 .l-flex-container {
   display: flex;
@@ -51,6 +57,9 @@ a {
   color: #f6f6f6;
 }
 
+/* Estilos del Nav Principal
+------------------------------------------ */
+
 .c-main-nav {
   display: inline-block;
 }
@@ -82,11 +91,18 @@ a {
   font-size: 1.2em;
 }
 
+/* Estilos del main 
+------------------------------------------ */
+
 .c-main {
   width: 100%;
   flex-basis: 600px;
+  min-height: 100vh;
   background-color: #7599b3;
 }
+
+/* Estilos del footer 
+------------------------------------------ */
 
 .c-footer {
   width: 100%;
@@ -99,6 +115,9 @@ a {
   margin-right: 5px;
   font-variation-settings: "FILL" 0, "wght" 350, "GRAD" 0, "opsz" 24;
 }
+
+/* Media Querys 
+------------------------------------------ */
 
 @media only screen and (min-width: 768px) {
 }
